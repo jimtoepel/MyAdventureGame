@@ -142,13 +142,77 @@
 
 - (void) day3
 {
+    BOOL ate_granola;
+    
     // 1 Loop to see if alive
     while (userIsAlive) {
         // 2 - Scenario1
+        NSLog(@"\n\nDay:03\n\nThe sun bears down on your face and the sound of seagulls wake you. As you attempt to stand up, you are reminded of your ravaging hunder.\nPress ENTER to continue.");
+            waitOnCR();
+        NSLog(@"\n\nTo your surprise, you discover a granola bar that you stashed in the lower pocket of your cargo pants before your flight.\n1. Eat it.\n2. Save it for later.");
+            scanf("%i", &ans);
+            waitOnCR();
+        
         // 3 - Answer1
+        if (ans == 1) {
+            ate_granola = true;
+            NSLog(@"\n\nThe granola bar effectively curbs your hunger. Health is increased.\nPress ENTER to continue.");
+            health = health + 10;
+            waitOnCR();
+        }
+        else {
+            ate_granola = false;
+            NSLog(@"\n\nPerhaps you will find a greater use for the bar later.\nPress ENTER to continue.");
+            waitOnCR();
+        }
+        
         // 4 - Scenario2
+        NSLog(@"\n\nYou recall that today is the day the dispatchers promised a rescue. You need an aerial view of the island in order to see where the resume will arrive.\n1. Climb a tall tree.\n2. Climb a rock face.");
+            scanf("%i", &ans);
+            waitOnCR();
+        
         // 5 - Answer2
+        if (ans == 1) {
+            NSLog(@"\n\nYou climb to the top of a mossed over tree. The view is great and you can see a meadow that would be ideal for a helicopter landing.\nHowever, you also see a perfect area for a boat rescue on the east coast.\nAs you take in the view, you feel a jab and a following stinging sensation.\nYou have been bit by a snake.\nPress ENTER to continue.");
+                waitOnCR();
+                NSLog(@"\n\nAfter you climb down from the tree, you faint at its base. Health is decreased significantly. Press ENTER to continue.");
+            waitOnCR();
+            health = health - 50;
+            if (health <= 0) {
+                break;
+            }
+        }
+        else {
+            NSLog(@"\n\nYou climb to the top of a rock face. The view is great and you can see a meadow that would be ideal for a helicopter landing.\nHowever, you also see a perfect area for a boat rescue on the east coast.\nPress enter to continue.");
+            waitOnCR();
+        }
+        NSLog(@"\n\nYou decide to walk to the east coast as it seems to be the most likely rescue point.\nPress ENTER to continue.");
+        waitOnCR();
+        NSLog(@"\n\nAs you walk through the jungle, you trip over a net. You are instantly flung upside down.\nPress ENTER to continue.");
+        waitOnCR();
+        NSLog(@"\n\nAs you look around, all you can make out are dark forms with bright painted faces. You are surrounded by natives.\nPress ENTER to continue.");
+        waitOnCR();
+        NSLog(@"\n\nThey take you to the east beach and set you next to a grand fire. When they are not looking, you reach into your pockets for something useful.\nPress ENTER to continue.");
+        waitOnCR();
+        if (ate_granola == true) {
+            NSLog(@"\n\nYou search to find you granola bar wrapper but you seem to have left it under a tree. You imagine that the shiny foil wrapper would have deeply impressed the natives.\nThe natives knock you out.");
+            health = 0;
+            break;
+        }
+        else {
+            NSLog(@"\n\nYou pull out your granola bar and draw their attention. They are shocked by the foil wrapper. They think it is a new metal.\nThe chief accepts your invitation to eat the honey granola bar. He is deeply impressed.\nPress ENTER to continue.");
+            waitOnCR();
+            NSLog(@"\n\nIn this same moment, a large steel rescue boat approaches. The natives are terrified and leave you standing on the beach.\nYou are rescued.\nPress ENTER to continue.");
+            waitOnCR();
+            NSLog(@"\n\nYOU WIN\nPress ENTER to continue.");
+            waitOnCR();
+            break;
+        }
+
         // 6 - Day Completion Message
+
+        
+    
     }
 }
 
