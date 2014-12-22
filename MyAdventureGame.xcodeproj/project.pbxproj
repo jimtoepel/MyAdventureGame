@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1ED4D101A4649C300CD19E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ED4D0F1A4649C300CD19E6 /* main.m */; };
+		B1ED4D181A464A9200CD19E6 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ED4D171A464A9200CD19E6 /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		B1ED4D0C1A4649C300CD19E6 /* MyAdventureGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyAdventureGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1ED4D0F1A4649C300CD19E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1ED4D161A464A9200CD19E6 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B1ED4D171A464A9200CD19E6 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				B1ED4D0F1A4649C300CD19E6 /* main.m */,
+				B1ED4D161A464A9200CD19E6 /* Game.h */,
+				B1ED4D171A464A9200CD19E6 /* Game.m */,
 			);
 			path = MyAdventureGame;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1ED4D101A4649C300CD19E6 /* main.m in Sources */,
+				B1ED4D181A464A9200CD19E6 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
