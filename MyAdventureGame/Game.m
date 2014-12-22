@@ -77,7 +77,6 @@
     
 }
 
-
 - (void) day2
 {
     // 1 Loop to see if alive
@@ -215,5 +214,14 @@
     
     }
 }
+
+- (void) printHealth;
+{
+    if (health > 0) {
+        NSLog(@"\n\n%@ managed to finish the day with a total health of: %i\nPress ENTER to continue.", name, health);
+        waitOnCR();
+    }
+}
+
 
 @end

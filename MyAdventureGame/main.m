@@ -30,8 +30,11 @@ int main(int argc, const char * argv[]) {
             // 4 show the instructions
             [myGame instructions];
             [myGame day1];
+            [myGame printHealth];
             [myGame day2];
+            [myGame printHealth];
             [myGame day3];
+            [myGame printHealth];
             
             if (myGame.health<=0) {
                 NSLog(@"\n\nYou have Died. \nPress enter for the next dialogue.");
