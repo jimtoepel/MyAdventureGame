@@ -52,8 +52,27 @@
         }
         
         // 4 - Scenario2
+        NSLog(@"\n\nInside the jungle, you find a bush with little black fruit, at its base are white speckled mushrooms.\n1. Eat mushrooms.\n2. Eat berries.");
+        scanf("%i", &ans);
+        waitOnCR();
+        
         // 5 - Answer2
+        if (ans ==1) {
+            NSLog(@"\n\nYou are left with a bitter taste in your mouth and a gugling in your stomach.\nHealth decreased.\nPress ENTER to continue.");
+            health = health - 10;
+            waitOnCR();
+        }
+        else {
+            NSLog(@"\n\nThe sweetness of the berries is quite savory considering all the seawater you consumed.\nHealth increased\nPress ENTER to continue.");
+            waitOnCR();
+            health = health + 10;
+            
+        }
         // 6 - Day Completion Message
+        NSLog(@"\n\nYou fall aslepp beneath the tree. Day:01 was sucessfully completed.\nPress ENTER to continue.");
+        waitOnCR();
+        break;
+        
     }
     
 }
@@ -64,12 +83,60 @@
     // 1 Loop to see if alive
     while (userIsAlive) {
         // 2 - Scenario1
+        NSLog(@"\n\nDay:02\n\nUpon being nudged by a large animal, you awake. \nIt is a large gorilla.\n1. Run.\n2. Embrace your fate and climg in its mouth.");
+        scanf("%i", &ans);
+        waitOnCR();
+        
         // 3 - Answer1
+        if (ans == 1) {
+            NSLog(@"\n\nThe gorilla watches you run in amusment. It trails behind you, until you drop from exhaustion.\nHe takes a bite out of your scrawny arm.\nPress ENTER to continue.");
+            waitOnCR();
+            NSLog(@"\n\nOUCH\nThe gorilla shakes its head in disapprobal and proceeds to spit out the remaining flesh. The gorilla runs back into the jungle.\nYour gaping wound results in a significant health decrease.\nPress ENTER to continue.");
+            waitOnCR();
+            health = health - 60;
+        }
+        else {
+            NSLog(@"\n\nBy peacefully approaching the gorilla, it does not feel threatened. It takes you on its back to explore the island.\nPress ENTER to continue.");
+            waitOnCR();
+            NSLog(@"\n\nAs you pass through the jungle, you see that the snakes inhabit the taller trees. You pass through a grand meadow of grass.\nThe ape slows, as you look to the east coast of the island, you make out a tribe of warriors. The ape turns and brings you back to where he found you.\nYou take a mental note of what you saw. \nPress ENTER to continue.");
+            waitOnCR();
+        }
+
         // 4 - Scenario2
+        NSLog(@"\n\nYou feel slightly chilled. You know the night will be really cold if you don't build a fire and retrieve wood.\n1. Search the beach. \n2. Search the jungle.");
+        scanf("%i", &ans);
+        waitOnCR();
+        
         // 5 - Answer2
+        if (ans == 1) {
+            while (ans == 1 ) {
+                NSLog(@"\n\nYou feel the warm sand under your feet.\n1. Seatch the west coast.\n2. Search the southern coast.");
+                scanf("%i", &ans);
+                if (ans == 1) {
+                    NSLog(@"\n\nYou walk for a mile and come upon some sun dried timber. You create a tee-pee structure out of the wood.\nYou manage to make the kindle catch fire by scratching rocks together.\n Press ENTER to continue.");
+                    waitOnCR();
+                    break;
+                }
+                if (ans == 1) {
+                    NSLog(@"\n\nYou walk in circles for another mile, this part of the beach does not have timber.\nPress ENTER to continue.");
+                    ans = 1;
+                    waitOnCR();
+                }
+            }
+        }
+        else {
+            NSLog(@"\n\nYou find plenty of wood and drag it on to the beach for your fire.\nPress ENTER to continue.");
+            waitOnCR();
+            NSLog(@"\n\nAs night falls you have failed to light your fire, the wood from the jungle is too moist and rotten.\nYou find shelter under another tree, but you are exceptionally cold and weak. Health decreases.\nPress ENTER to continue.");
+            health = health - 10;
+            waitOnCR();
+        }
+        
         // 6 - Day Completion Message
+        NSLog(@"\n\nYou fall asleep, Day:02 was sucessfully completed.\nPress ENTER to continue.");
+        waitOnCR();
+        break;
     }
-    
 }
 
 
