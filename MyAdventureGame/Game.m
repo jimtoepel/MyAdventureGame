@@ -91,7 +91,7 @@
         if (ans == 1) {
             NSLog(@"\n\nThe gorilla watches you run in amusment. It trails behind you, until you drop from exhaustion.\nHe takes a bite out of your scrawny arm.\nPress ENTER to continue.");
             waitOnCR();
-            NSLog(@"\n\nOUCH\nThe gorilla shakes its head in disapprobal and proceeds to spit out the remaining flesh. The gorilla runs back into the jungle.\nYour gaping wound results in a significant health decrease.\nPress ENTER to continue.");
+            NSLog(@"\n\nOUCH\nThe gorilla shakes its head in disapproval and proceeds to spit out the remaining flesh. The gorilla runs back into the jungle.\nYour gaping wound results in a significant health decrease.\nPress ENTER to continue.");
             waitOnCR();
             health = health - 60;
         }
@@ -112,6 +112,7 @@
             while (ans == 1 ) {
                 NSLog(@"\n\nYou feel the warm sand under your feet.\n1. Seatch the west coast.\n2. Search the southern coast.");
                 scanf("%i", &ans);
+                waitOnCR();
                 if (ans == 1) {
                     NSLog(@"\n\nYou walk for a mile and come upon some sun dried timber. You create a tee-pee structure out of the wood.\nYou manage to make the kindle catch fire by scratching rocks together.\n Press ENTER to continue.");
                     waitOnCR();
@@ -119,8 +120,9 @@
                 }
                 if (ans == 2) {
                     NSLog(@"\n\nYou walk in circles for another mile, this part of the beach does not have timber.\nPress ENTER to continue.");
-                    ans = 1;
                     waitOnCR();
+                    ans = 1;
+
                 }
             }
         }
