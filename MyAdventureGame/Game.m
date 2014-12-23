@@ -13,6 +13,7 @@
 @synthesize userIsAlive;
 @synthesize health;
 @synthesize ans;
+@synthesize score;
 
 - (void) instructions
 {
@@ -116,7 +117,7 @@
                     waitOnCR();
                     break;
                 }
-                if (ans == 1) {
+                if (ans == 2) {
                     NSLog(@"\n\nYou walk in circles for another mile, this part of the beach does not have timber.\nPress ENTER to continue.");
                     ans = 1;
                     waitOnCR();
@@ -223,5 +224,11 @@
     }
 }
 
+- (void) printScore:(float) x
+{
+    score = (x/110) * 100;
+    NSLog(@"%@, based on your health you recieved %i percent of the available points.", name, score);
+    waitOnCR();
+}
 
 @end

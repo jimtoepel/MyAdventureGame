@@ -41,6 +41,8 @@ int main(int argc, const char * argv[]) {
                 waitOnCR();
             }
             
+            [myGame printScore:myGame.health];
+            
             // 5 provide a quit option
             NSLog(@"\n\nRestart?\n1.Yes\n2.No");
             scanf("%i", &response);

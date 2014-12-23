@@ -19,17 +19,20 @@ void waitOnCR (void);
     BOOL userIsAlive;
     int Health;
     int ans;
+    int score;
 }
 
 @property (strong) NSString* name;
 @property BOOL userIsAlive;
 @property int health;
 @property int ans;
+@property int score;
 
 - (void) instructions;
 - (void) day1;
 - (void) day2;
 - (void) day3;
 - (void) printHealth;
+- (void) printScore: (float) x;
 
 @end
